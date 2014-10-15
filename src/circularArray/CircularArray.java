@@ -50,12 +50,20 @@ public class CircularArray {
     }
     
     public Object getCurrent(){
-        Object item;
-        if((0 <= this.curr)&&(this.curr <= (size1-1))){
+        Object item = null;
+        if((0 <= this.curr)&&(this.curr < size1)){
          item = this.firstHalf[this.curr]; 
-    }else{
-          item = this.secondHalf[this.curr];
         }
+        else{
+            if (this.curr == totalSize){ 
+            this.curr = 0;//rotation to first array
+        item = this.firstHalf[this.curr];
+            }
+        else {
+            item = this.secondHalf[this.curr - size2];
+        }
+        }
+           
         return item;
     }
 

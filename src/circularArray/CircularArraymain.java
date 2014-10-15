@@ -19,13 +19,20 @@ public class CircularArraymain {
         CircularArray arr = new CircularArray(data);
         
         System.out.println("current item: " + arr.getCurrent().toString());
-        System.out.println("array sizes: " + arr.firstHalf.length + " ; " + arr.secondHalf.length);
-        for(int x = 0; x < arr.firstHalf.length; x++){
-        System.out.println("first: " + arr.firstHalf[x]);
+        System.out.println("array sizes: " + arr.firstHalf.length + " ; " + arr.secondHalf.length +"\n");
+//        for(int x = 0; x < arr.firstHalf.length; x++){
+//        System.out.println("first: " + arr.firstHalf[x]);
+//        }
+//        for(int x = 0; x < arr.secondHalf.length; x++){
+//        System.out.println("second: " + arr.secondHalf[x]);
+//        }
+        
+          for(int x = 0; x < arr.totalSize+1; x++){
+            System.out.println("current: " + arr.curr + " item: " + arr.getCurrent());
+            arr.curr++;       
         }
-        for(int x = 0; x < arr.secondHalf.length; x++){
-        System.out.println("second: " + arr.secondHalf[x]);
-        }
+    
+         
     }
     
 }
